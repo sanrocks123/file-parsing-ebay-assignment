@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+mainClassName = 'credit.service'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Credit Service'
+    }
+}
+
+dependencies {
+
+    implementation "org.json:json:20171018"
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+
+    implementation "org.apache.velocity:velocity:1.7"
+    implementation "org.apache.velocity:velocity-tools:2.0"
+
+    testImplementation "junit:junit:4.12"
+}

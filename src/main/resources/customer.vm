@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Postcode</th>
+            <th>Phone</th>
+            <th>Credit Limit</th>
+            <th>Birthday</th>
+        </tr>
+        #foreach( $customer in $customers )
+         <tr>
+            <td> $customer.name </td>
+            <td> $customer.address </td>
+            <td> $customer.postcode </td>
+            <td> $customer.phone </td>
+            <td> $customer.creditLimit </td>
+            <td> $customer.birthdate </td>
+         </tr>
+        #end
+    </table>
+  </body>
+</html>
